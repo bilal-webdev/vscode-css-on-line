@@ -1,0 +1,72 @@
+{
+  "name": "css-on-line",
+  "displayName": "CSS-On-Line",
+  "description": "Format your CSS with ease - keep one rule on one line with my CSS-On-Line.",
+  "version": "0.0.1",
+  "publisher": "Bilal Shaikh",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bilal-webdev/vscode-css-on-line"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Formatters"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "css-on-line.cssOnLine",
+        "title": "CSS-On-Line"
+      }
+    ],
+    "languages": [
+      {
+        "id": "css",
+        "aliases": [
+          "CSS",
+          "css"
+        ],
+        "extensions": [
+          ".css"
+        ],
+        "configuration": "./language-configuration.json",
+        "format": {
+          "default": "CSS-On-Line",
+          "options": {
+            "css": {
+              "extensionId": "Bilal Shaikh.CSS-On-Line",
+              "displayName": "gulp-css-format-oneline",
+              "providerName": "Bilal Shaikh",
+              "settings": {}
+            }
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.77.0",
+    "@vscode/test-electron": "^2.3.0",
+    "eslint": "^8.39.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-css-format-oneline": "^1.2.0"
+  }
+}
