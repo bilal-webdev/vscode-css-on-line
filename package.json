@@ -15,7 +15,9 @@
   "categories": [
     "Formatters"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onLanguage:css"
+  ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
@@ -34,7 +36,6 @@
         "extensions": [
           ".css"
         ],
-        "configuration": "./language-configuration.json",
         "format": {
           "default": "CSS-On-Line",
           "options": {
@@ -64,9 +65,5 @@
     "glob": "^8.1.0",
     "mocha": "^10.2.0",
     "typescript": "^5.0.4"
-  },
-  "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-css-format-oneline": "^1.2.0"
   }
 }
